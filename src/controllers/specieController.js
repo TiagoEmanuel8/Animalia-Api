@@ -17,13 +17,28 @@ const addWithImage = async (req, res) => {
   return res.status(201).json(addImage);
 };
 
-const getAllSpecies = async (req, res) => {
+const getAllSpecies = async (_req, res) => {
   const species = await service.getAllSpecies();
   return res.status(200).json(species);
 };
 
+const getSpeciesById = async () => {};
+
+const getSpeciesByName = async () => {};
+
+const getSpeciesByClass = async () => {};
+
+const getSpeciesByFamily = async () => {};
+
+const getSpeciesByGender = async () => {};
+
 module.exports = {
   createSpecies,
   addWithImage,
-  getAllSpecies
+  getAllSpecies,
+  getSpeciesById,
+  getSpeciesByName,
+  getSpeciesByClass,
+  getSpeciesByFamily,
+  getSpeciesByGender
 };
