@@ -6,7 +6,7 @@ const createSpecies = async (req, res) => {
     if(create.message) {
       return res.status(create.status).json({ message: create.message });
     }
-  return res.status(201).json(create)
+  return res.status(201).json(create);
 };
 
 const addWithImage = async (req, res) => {
@@ -14,10 +14,16 @@ const addWithImage = async (req, res) => {
   const { filename } = req.file;
   const image = `http://localhost:3001/images/${filename}`;
   const addImage = await service.addWithImage(id, image);
-  return res.status(201).json(addImage)
+  return res.status(201).json(addImage);
+};
+
+const getAllSpecies = async (req, res) => {
+  const species = await service.getAllSpecies();
+  return res.status(200).json(species);
 };
 
 module.exports = {
   createSpecies,
-  addWithImage
+  addWithImage,
+  getAllSpecies
 };

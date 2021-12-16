@@ -19,7 +19,13 @@ const addWithImage = async (id, image) => {
   return addImage;
 };
 
+const getAllSpecies = async () => {
+  const species = await models.getAllSpecies();
+  return species;
+};
+
 module.exports = {
   createSpecies,
-  addWithImage
+  addWithImage,
+  getAllSpecies
 };

@@ -26,7 +26,14 @@ const addWithImage = async (id, image) => {
   return specieWithImage;
 };
 
+const getAllSpecies = async () => {
+  const species = await connection()
+    .then((db) => db.collection('specie').find().toArray());
+  return species;
+};
+
 module.exports = {
   createSpecies,
-  addWithImage
+  addWithImage,
+  getAllSpecies
 };
