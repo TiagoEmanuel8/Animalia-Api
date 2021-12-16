@@ -26,45 +26,45 @@ describe('1 - A aplicação deverá ter o endpoint POST `/specie` ', () => {
     await connection.close();
   });
 
-  // it('Será validado que não é possível cadastrar uma espécie sem o campo "name"', async () => {
-  //   await frisby
-  //     .post(`${url}/specie`, {
-  //       reino: 'Animalia',
-  //       filo: 'Chordata',
-  //       classe: 'Aves',
-  //       ordem: 'Passeriformes',
-  //       subOrdem: 'Tyranni',
-  //       familia: 'Tyrannidae',
-  //       genero: 'Pitangus',
-  //       especie: 'P. sulphuratus',
-  //       subEspecie: ""
-  //     })
-  //     .expect('status', 400)
-  //     .then((responseLogin) => {
-  //       const { json } = responseLogin;
-  //       expect(json.message).toBe('the fields "Reino", "Filo", "Classe", "Ordem", "SubOrdem", "Familia", "Genero", "Especie", "Nome" are required.');
-  //     });
-  // });
+  it('Será validado que não é possível cadastrar uma espécie sem o campo "name"', async () => {
+    await frisby
+      .post(`${url}/specie`, {
+        reino: 'Animalia',
+        filo: 'Chordata',
+        classe: 'Aves',
+        ordem: 'Passeriformes',
+        subOrdem: 'Tyranni',
+        familia: 'Tyrannidae',
+        genero: 'Pitangus',
+        especie: 'P. sulphuratus',
+        subEspecie: ""
+      })
+      .expect('status', 400)
+      .then((responseLogin) => {
+        const { json } = responseLogin;
+        expect(json.message).toBe('the fields "Reino", "Filo", "Classe", "Ordem", "SubOrdem", "Familia", "Genero", "Especie", "Nome" are required.');
+      });
+  });
 
-  // it('Será validado que não é possível cadastrar uma espécie sem o campo "Especie"', async () => {
-  //   await frisby
-  //   .post(`${url}/specie`, {
-  //     reino: 'Animalia',
-  //     filo: 'Chordata',
-  //     classe: 'Aves',
-  //     ordem: 'Passeriformes',
-  //     subOrdem: 'Tyranni',
-  //     familia: 'Tyrannidae',
-  //     genero: 'Pitangus',
-  //     subEspecie: "",
-  //     nome: "Bem-te-vi"
-  //   })
-  //   .expect('status', 400)
-  //   .then((responseLogin) => {
-  //     const { json } = responseLogin;
-  //     expect(json.message).toBe('the fields "Reino", "Filo", "Classe", "Ordem", "SubOrdem", "Familia", "Genero", "Especie", "Nome" are required.');
-  //   });
-  // });
+  it('Será validado que não é possível cadastrar uma espécie sem o campo "Especie"', async () => {
+    await frisby
+    .post(`${url}/specie`, {
+      reino: 'Animalia',
+      filo: 'Chordata',
+      classe: 'Aves',
+      ordem: 'Passeriformes',
+      subOrdem: 'Tyranni',
+      familia: 'Tyrannidae',
+      genero: 'Pitangus',
+      subEspecie: "",
+      nome: "Bem-te-vi"
+    })
+    .expect('status', 400)
+    .then((responseLogin) => {
+      const { json } = responseLogin;
+      expect(json.message).toBe('the fields "Reino", "Filo", "Classe", "Ordem", "SubOrdem", "Familia", "Genero", "Especie", "Nome" are required.');
+    });
+  });
 
   it('Será validado que é possível cadastrar uma espécie com sucesso', async () => {
     await frisby
