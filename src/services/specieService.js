@@ -26,6 +26,9 @@ const getAllSpecies = async () => {
 
 const getSpeciesById = async (id) => {
   const specie = await models.getSpeciesById(id);
+  if(!specie) {
+    return { status: 400, message: 'species not found' }
+  }
   return specie;
 };
 
