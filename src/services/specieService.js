@@ -2,12 +2,12 @@ const models = require('../models/specieModel')
 
 const createSpecies = async (dataSpecie) => {
   const {
-    reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome
+    reino, filo, classe, ordem, familia, genero, especie, nome
   } = dataSpecie;
 
-  const checkFields = reino && filo && classe && ordem && subOrdem && familia && genero && especie && nome;
+  const checkFields = reino && filo && classe && ordem && familia && genero && especie && nome;
   if(!checkFields) {
-    return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "SubOrdem", "Familia", "Genero", "Especie", "Nome" are required.'}
+    return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
   }
 
   const specie = await models.createSpecies(dataSpecie);
