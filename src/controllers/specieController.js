@@ -36,6 +36,10 @@ const updateSpecies = async (req, res) => {
   const dataSpecie = req.body;
   
   const specie = await service.updateSpecies(id, dataSpecie);
+    if(specie.message) {
+      return res.status(specie.status).json({ message: specie.message });
+    }
+  
   return res.status(200).json(specie);
 };
 

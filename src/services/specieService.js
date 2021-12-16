@@ -26,13 +26,18 @@ const getAllSpecies = async () => {
 
 const getSpeciesById = async (id) => {
   const specie = await models.getSpeciesById(id);
-  if(!specie) {
-    return { status: 400, message: 'species not found' }
-  }
+    if(!specie) {
+      return { status: 400, message: 'species not found' }
+    }
   return specie;
 };
 
 const updateSpecies = async (id, dataSpecie) => {
+  const findSpecie = await models.getSpeciesById(id);
+    if(!findSpecie) {
+      return { status: 400, message: 'species not found' }
+    };
+  
   const specie = await models.updateSpecies(id, dataSpecie);
   return specie;
 };
