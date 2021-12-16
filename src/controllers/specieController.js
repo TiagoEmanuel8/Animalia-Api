@@ -22,15 +22,15 @@ const getAllSpecies = async (_req, res) => {
   return res.status(200).json(species);
 };
 
-const getSpeciesById = async () => {};
+const getSpeciesById = async (req, res) => {};
 
-const getSpeciesByName = async () => {};
+const getSpeciesByName = async (req, res) => {};
 
-const getSpeciesByClass = async () => {};
+const getSpeciesByClass = async (req, res) => {};
 
-const getSpeciesByFamily = async () => {};
+const getSpeciesByFamily = async (req, res) => {};
 
-const getSpeciesByGender = async () => {};
+const getSpeciesByGender = async (req, res) => {};
 
 module.exports = {
   createSpecies,

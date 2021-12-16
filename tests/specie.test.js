@@ -178,3 +178,9 @@ describe('A aplicação deverá ter o endpoint GET `/specie` para listar as esp�
   });
 
 });
+
+// posteriormente implementar esses testes
+describe('A aplicação deverá ter endpoints que permitam listar as espécias por id ou name ou classe ou família ou gênero', () => {});
+
+// posteriormente implementar esses testes
+describe('A aplicação deverá ter o endpoint PUT `/specie` que permita a edição de espécies', () => {});
