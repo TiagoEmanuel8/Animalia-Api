@@ -24,23 +24,14 @@ const getAllSpecies = async () => {
   return species;
 };
 
-const getSpeciesById = async () => {};
-
-const getSpeciesByName = async () => {};
-
-const getSpeciesByClass = async () => {};
-
-const getSpeciesByFamily = async () => {};
-
-const getSpeciesByGender = async () => {};
+const getSpeciesById = async (id) => {
+  const specie = await models.getSpeciesById(id);
+  return specie;
+};
 
 module.exports = {
   createSpecies,
   addWithImage,
   getAllSpecies,
-  getSpeciesById,
-  getSpeciesByName,
-  getSpeciesByClass,
-  getSpeciesByFamily,
-  getSpeciesByGender
+  getSpeciesById
 };
