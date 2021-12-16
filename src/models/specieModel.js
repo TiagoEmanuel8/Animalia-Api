@@ -15,8 +15,18 @@ const createSpecies = async (dataSpecie) => {
   const specieInFormat = await connection().then((db) => db.collection('specie').findOne(ObjectId(id)));
   
   return specieInFormat;
-}
+};
+
+const addWithImage = async (id, image) => {
+  await connection()
+    .then((db) => db
+      .collection('specie')
+      .updateOne({ _id: ObjectId(id) }, { $set: { image } }));
+  const specieWithImage = await connection().then((db) => db.collection('specie').findOne(ObjectId(id)));
+  return specieWithImage;
+};
 
 module.exports = {
   createSpecies,
-}
+  addWithImage
+};

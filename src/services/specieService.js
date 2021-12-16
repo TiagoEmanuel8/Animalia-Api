@@ -12,8 +12,14 @@ const createSpecies = async (dataSpecie) => {
 
   const specie = await models.createSpecies(dataSpecie);
   return specie;
-}
+};
+
+const addWithImage = async (id, image) => {
+  const addImage = await models.addWithImage(id, image);
+  return addImage;
+};
 
 module.exports = {
-  createSpecies
+  createSpecies,
+  addWithImage
 };

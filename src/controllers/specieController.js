@@ -9,6 +9,15 @@ const createSpecies = async (req, res) => {
   return res.status(201).json(create)
 };
 
+const addWithImage = async (req, res) => {
+  const { id } = req.params;
+  const { filename } = req.file;
+  const image = `localhost:3001/src/images/${filename}`;
+  const addImage = await service.addWithImage(id, image);
+  return res.status(201).json(addImage)
+};
+
 module.exports = {
-  createSpecies
+  createSpecies,
+  addWithImage
 };
