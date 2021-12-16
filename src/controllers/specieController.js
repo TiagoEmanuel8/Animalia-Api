@@ -12,7 +12,7 @@ const createSpecies = async (req, res) => {
 const addWithImage = async (req, res) => {
   const { id } = req.params;
   const { filename } = req.file;
-  const image = `localhost:3001/src/images/${filename}`;
+  const image = `http://localhost:3001/images/${filename}`;
   const addImage = await service.addWithImage(id, image);
   return res.status(201).json(addImage)
 };
