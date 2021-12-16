@@ -44,6 +44,7 @@ const updateSpecies = async (req, res) => {
 };
 
 module.exports = {
+  message,
   createSpecies,
   addWithImage,
   getAllSpecies,

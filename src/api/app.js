@@ -16,6 +16,10 @@ app.use(
   }),
 );
 
+app.get('/', (req, res) => {
+  return res.status(200).json({ message: 'Acesse https://github.com/TiagoEmanuel8/species-Api para mais detalhes de funcionamento dessa API' });
+});
+
 app.use('/specie', router);
 app.use('/images', express.static(`${uploadPath}`));
 
