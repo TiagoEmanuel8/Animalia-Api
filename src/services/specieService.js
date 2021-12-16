@@ -32,9 +32,15 @@ const getSpeciesById = async (id) => {
   return specie;
 };
 
+const updateSpecies = async (id, dataSpecie) => {
+  const specie = await models.updateSpecies(id, dataSpecie);
+  return specie;
+};
+
 module.exports = {
   createSpecies,
   addWithImage,
   getAllSpecies,
-  getSpeciesById
+  getSpeciesById,
+  updateSpecies
 };

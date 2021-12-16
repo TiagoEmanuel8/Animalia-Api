@@ -10,6 +10,6 @@ router.put('/:id/image', multer.imageUpload(), rescue(controller.addWithImage));
 router.get('/:id/image', multer.imageUpload());
 router.get('/', rescue(controller.getAllSpecies));
 router.get('/:id', rescue(controller.getSpeciesById));
-router.get('/:nome', rescue(controller.getSpeciesByName));
+router.put('/:id', controller.updateSpecies);
 
 module.exports = router;

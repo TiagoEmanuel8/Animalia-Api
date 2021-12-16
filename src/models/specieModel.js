@@ -37,9 +37,27 @@ const getSpeciesById = async (id) => {
   return specie;
 };
 
+const updateSpecies = async (id, dataSpecie) => {
+  const {
+    reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome
+  } = dataSpecie;
+
+  await connection()
+    .then((db) => db.collection('specie')
+      .updateOne(
+        { _id: ObjectId(id) },
+        { $set: { reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome }}
+      ));
+    
+  const specieInFormat = await connection().then((db) => db.collection('specie').findOne(ObjectId(id)));
+  
+  return specieInFormat;
+};
+
 module.exports = {
   createSpecies,
   addWithImage,
   getAllSpecies,
-  getSpeciesById
+  getSpeciesById,
+  updateSpecies
 };

@@ -31,9 +31,18 @@ const getSpeciesById = async (req, res) => {
   return res.status(200).json(specie);
 };
 
+const updateSpecies = async (req, res) => {
+  const { id } = req.params;
+  const dataSpecie = req.body;
+  
+  const specie = await service.updateSpecies(id, dataSpecie);
+  return res.status(200).json(specie);
+};
+
 module.exports = {
   createSpecies,
   addWithImage,
   getAllSpecies,
-  getSpeciesById
+  getSpeciesById,
+  updateSpecies
 };
