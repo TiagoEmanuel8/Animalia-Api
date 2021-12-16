@@ -5,6 +5,6 @@ const router = require('../routes/specieRoute')
 const app = express();
 app.use(bodyParser.json());
 
-app.get('/specie', router);
+app.use('/specie', router);
 
 module.exports = app;

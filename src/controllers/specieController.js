@@ -1,7 +1,12 @@
 const service = require('../services/specieService');
 
-const createSpecies = (req, res) => {
-  return res.status(200).json({ message: 'deu certo' })
+const createSpecies = async (req, res) => {
+  const dataSpecie = req.body;
+  const create = await service.createSpecies(dataSpecie);
+    if(create.message) {
+      return res.status(create.status).json({ message: create.message });
+    }
+  return res.status(201).json(create)
 };
 
 module.exports = {
