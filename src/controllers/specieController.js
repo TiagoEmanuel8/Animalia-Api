@@ -14,6 +14,9 @@ const addWithImage = async (req, res) => {
   const { filename } = req.file;
   const image = `http://localhost:3001/images/${filename}`;
   const addImage = await service.addWithImage(id, image);
+    if(addImage.message) {
+      return res.status(addImage.status).json({ message: addImage.message });
+    }
   return res.status(201).json(addImage);
 };
 

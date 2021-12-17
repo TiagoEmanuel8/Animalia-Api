@@ -15,6 +15,11 @@ const createSpecies = async (dataSpecie) => {
 };
 
 const addWithImage = async (id, image) => {
+  const specie = await models.getSpeciesById(id);
+    if(!specie) {
+      return { status: 400, message: 'species not found' }
+    }
+  
   const addImage = await models.addWithImage(id, image);
   return addImage;
 };
