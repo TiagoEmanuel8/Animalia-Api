@@ -38,6 +38,15 @@ const getSpeciesById = async (id) => {
 };
 
 const updateSpecies = async (id, dataSpecie) => {
+  const {
+    reino, filo, classe, ordem, familia, genero, especie, nome
+  } = dataSpecie;
+
+  const checkFields = reino && filo && classe && ordem && familia && genero && especie && nome;
+  if(!checkFields) {
+    return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
+  }
+
   const findSpecie = await models.getSpeciesById(id);
     if(!findSpecie) {
       return { status: 400, message: 'species not found' }
