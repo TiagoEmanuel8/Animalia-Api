@@ -1,14 +1,13 @@
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
-const OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true }
+const OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true };
 
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
-let db = null;
+const MONGO_DB_URL = process.env.MONGO_DB_URL;
 
-const connection = async () => db ? 
-Promise.resolve(db) : MongoClient.connect(MONGO_DB_URL, OPTIONS)
-  .then((conn) => { db = conn.db('Species');
-  return db;
-});
+const DB_NAME = process.env.DB_NAME;
+
+const connection = () => MongoClient.connect(MONGO_DB_URL, OPTIONS)
+  .then((conn) => conn.db(DB_NAME));
 
 module.exports = connection;
