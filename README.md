@@ -129,8 +129,54 @@ Será validado que os campos `reino, filo, classe, ordem,	familia, genero, espec
 
 # Testes
 
+É possível abrir o terminal dentro da aplicação e digitar o comando `npm test specie.test.js` ou `npm test` para testar a aplicação
 
+![2021-12-16-17-46-39](https://user-images.githubusercontent.com/72472530/146544916-712b61c9-0195-4acc-9320-f9d22a304975.gif)
 
 # Instalação e uso
 
-
+Para executar o projeto sua máquina deve satisfazer os requisitos abaixo.  
+  
+Pré-requisitos  
+  
+```  
+- node v16.8.0  
+- npm 7.21.0  
+- git version 2.17.1  
+  
+```  
+  
+[Download node js](https://nodejs.org/en/)  
+  
+[Download git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  
+  
+### Clonando o projeto  
+  
+Digite o comando abaixo para clonar o projeto.  
+  
+```  
+git clone [https://github.com/TiagoEmanuel8/species-Api.git](https://github.com/TiagoEmanuel8/species-Api.git)  
+  
+```  
+  
+Entre na pasta  
+  
+```  
+cd species-Api 
+  
+```  
+  
+### Instalando as dependências  
+  
+```  
+npm install  
+  
+```  
+  
+### Executando o projeto  
+  
+```  
+npm start  
+  
+```  
+---------
