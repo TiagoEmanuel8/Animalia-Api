@@ -66,10 +66,66 @@ Será validado que os campos `reino, filo, classe, ordem,	familia, genero, espec
 ![1 - validação](https://user-images.githubusercontent.com/72472530/146537890-201d6671-2b5f-4f61-bee3-908be9299748.png)
 
 
-2 - A aplicação tem o endpoint `PUT /specie/:id/image`
-3 - A aplicação tem o endpoint `GET /specie`
-4 - A aplicação tem o endpoint `GET /specie/:id`
-5 - A aplicação tem o endpoint `PUT /specie/:id`
+### 2 - A aplicação tem o endpoint `PUT /specie/:id/image`
+Esse endpoint é responsável por adicionar uma nova imagem a uma espécie previamente cadastrada.
+
+O campo **id** deve corresponder ao id da espécie cadastrada
+
+*exemplo de requisição*
+
+![2 - adicionar imagem](https://user-images.githubusercontent.com/72472530/146543476-9a5c274d-b9b3-461d-af0b-e7e302d47388.png)
+
+Ao clicar na url a imagem será carregada
+
+![2 - acesso imagem](https://user-images.githubusercontent.com/72472530/146543531-4ccbf177-b53d-45f8-a0fc-41b61ec829a7.png)
+
+Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
+
+*exemplo de requisição*
+
+![2 - id invalido](https://user-images.githubusercontent.com/72472530/146543714-ec9d0b08-dc4e-4e27-aa40-4258b672df7b.png)
+
+### 3 - A aplicação tem o endpoint `GET /specie`
+
+Esse endpoint é responsável por listar todas as espécies cadastradas no banco de dados.
+
+*exemplo de requisição*
+
+![3 - listar todos](https://user-images.githubusercontent.com/72472530/146543826-74301ea2-62c5-45e8-a3f3-4b954db59ed7.png)
+
+### 4 - A aplicação tem o endpoint `GET /specie/:id`
+
+Esse endpoint é responsável por listar uma espécie através do **id**
+
+*exemplo de requisição*
+
+![4 - listar um](https://user-images.githubusercontent.com/72472530/146543857-bd80baec-4dad-422c-add9-46fb6febb8b3.png)
+
+Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
+
+*exemplo de requisição*
+
+![4 - validacao id](https://user-images.githubusercontent.com/72472530/146544054-7d50d3a6-aeb2-4339-a287-4fe378e3444d.png)
+
+### 5 - A aplicação tem o endpoint `PUT /specie/:id`
+
+Esse endpoint é responsável por editar dados de uma espécie previamente cadastrada
+
+Nessa requisição devem ser enviados dados através do **id** que corresponde a uma espécie preciamente cadastrada, e no corpo da requisição devem ser enviados o dado a ser alterado
+
+*exemplo de requisição*
+
+![5 - editar](https://user-images.githubusercontent.com/72472530/146544115-40d75df3-baec-4bde-9423-b26b454731c2.png)
+
+Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
+
+*exemplo de requisição*
+
+![5 - validação id](https://user-images.githubusercontent.com/72472530/146544151-d02617ed-84f1-49d3-b6b0-689c0d298cb7.png)
+
+Será validado que os campos `reino, filo, classe, ordem,	familia, genero, especie e nome` são **obrigatórios**
+
+![5 - validação campos](https://user-images.githubusercontent.com/72472530/146544338-469268a5-c068-4662-89db-a56a1c04924a.png)
 
 # Testes
 
