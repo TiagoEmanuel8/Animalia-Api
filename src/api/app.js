@@ -27,7 +27,7 @@ app.use('/images', express.static(`${uploadPath}`));
 
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
-// `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apianimalia.ckrpd.mongodb.net/species?retryWrites=true&w=majority`
+
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@apianimalia.ckrpd.mongodb.net/species?retryWrites=true&w=majority`)
   .then(() => {
     console.log('conectamos ao mongodb');

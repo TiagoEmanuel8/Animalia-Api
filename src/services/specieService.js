@@ -1,9 +1,8 @@
-// const models = require('../models/specieModel');
 const Specie = require('../models/Specie');
 
 const createSpecies = async (dataSpecie) => {
   const {
-    reino, filo, classe, ordem, familia, genero, especie, nome
+    reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome, nomeCientifico
   } = dataSpecie;
 
   const checkFields = reino && filo && classe && ordem && familia && genero && especie && nome;
@@ -11,7 +10,10 @@ const createSpecies = async (dataSpecie) => {
     return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
   }
 
-  const specie = await Specie.create(dataSpecie);
+  const formatData = { 
+    reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome, nomeCientifico 
+   }
+  const specie = await Specie.create(formatData);
   return specie;
 };
 
@@ -20,9 +22,11 @@ const addWithImage = async (id, image) => {
     if(!specie) {
       return { status: 400, message: 'species not found' }
     }
-  // const formatImage = { image }
-  const addImage = await Specie.updateOne({ _id: id}, { image });
-  return addImage;
+
+  await Specie.updateOne({ _id: id}, { image });
+
+  const specieWithImage = await Specie.findOne({ _id: id });
+  return specieWithImage;
 };
 
 const getAllSpecies = async () => {
@@ -53,8 +57,10 @@ const updateSpecies = async (id, dataSpecie) => {
       return { status: 400, message: 'species not found' }
     };
   
-  const specie = await Specie.updateOne({ _id: id }, dataSpecie );
-  return specie;
+  await Specie.updateOne({ _id: id }, dataSpecie );
+
+  const specieWithImage = await Specie.findOne({ _id: id });
+  return specieWithImage;
 };
 
 module.exports = {

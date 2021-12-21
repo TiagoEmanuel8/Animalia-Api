@@ -12,6 +12,7 @@ const Specie = mongoose.model('Specie', {
   subEspecie: String,
   nome: String,
   nomeCientifico: String,
+  image: String
 });
 
 module.exports = Specie;
