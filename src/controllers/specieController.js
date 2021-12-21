@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const service = require('../services/specieService');
 
 const createSpecies = async (req, res) => {
@@ -12,7 +14,9 @@ const createSpecies = async (req, res) => {
 const addWithImage = async (req, res) => {
   const { id } = req.params;
   const { filename } = req.file;
-  const image = `http://localhost:3001/images/${filename}`;
+  const URL = process.env.PORT || 'localhost:3001';
+
+  const image = `http://${URL}/images/${filename}`;
   const addImage = await service.addWithImage(id, image);
     if(addImage.message) {
       return res.status(addImage.status).json({ message: addImage.message });
