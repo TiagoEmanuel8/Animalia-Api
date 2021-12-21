@@ -1,4 +1,5 @@
-const models = require('../models/specieModel')
+// const models = require('../models/specieModel');
+const Specie = require('../models/Specie');
 
 const createSpecies = async (dataSpecie) => {
   const {
@@ -10,27 +11,27 @@ const createSpecies = async (dataSpecie) => {
     return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
   }
 
-  const specie = await models.createSpecies(dataSpecie);
+  const specie = await Specie.create(dataSpecie);
   return specie;
 };
 
 const addWithImage = async (id, image) => {
-  const specie = await models.getSpeciesById(id);
+  const specie = await Specie.findOne({ _id: id });
     if(!specie) {
       return { status: 400, message: 'species not found' }
     }
-  
-  const addImage = await models.addWithImage(id, image);
+  // const formatImage = { image }
+  const addImage = await Specie.updateOne({ _id: id}, { image });
   return addImage;
 };
 
 const getAllSpecies = async () => {
-  const species = await models.getAllSpecies();
+  const species = await Specie.find();
   return species;
 };
 
 const getSpeciesById = async (id) => {
-  const specie = await models.getSpeciesById(id);
+  const specie = await Specie.findOne({ _id: id });
     if(!specie) {
       return { status: 400, message: 'species not found' }
     }
@@ -47,12 +48,12 @@ const updateSpecies = async (id, dataSpecie) => {
     return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
   }
 
-  const findSpecie = await models.getSpeciesById(id);
+  const findSpecie = await Specie.findOne({ _id: id });
     if(!findSpecie) {
       return { status: 400, message: 'species not found' }
     };
   
-  const specie = await models.updateSpecies(id, dataSpecie);
+  const specie = await Specie.updateOne({ _id: id }, dataSpecie );
   return specie;
 };
 
