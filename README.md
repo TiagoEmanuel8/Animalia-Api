@@ -79,7 +79,7 @@ Será validado que os campos `reino, filo, classe, ordem,	familia, genero, espec
 
 ![1 - caso de erro](https://user-images.githubusercontent.com/72472530/146947938-df82ac2d-024e-40d4-ae35-39d1c8525e34.png)
 
-### 2 - A aplicação tem o endpoint `PUT /specie/:id/image`
+### 2 - A aplicação tem o endpoint `PATCH /specie/:id/image`
 Esse endpoint é responsável por adicionar uma nova imagem a uma espécie previamente cadastrada.
 
 O campo **id** deve corresponder ao id da espécie cadastrada
@@ -120,7 +120,7 @@ Será validado que o campo id deve corresponder a alguma espécie previamente ca
 
 ![4 - caso de erro](https://user-images.githubusercontent.com/72472530/146948337-3be68a5f-55ca-41bf-9305-7abee7d7b7d1.png)
 
-### 5 - A aplicação tem o endpoint `PUT /specie/:id`
+### 5 - A aplicação tem o endpoint `PATCH /specie/:id`
 
 Esse endpoint é responsável por editar dados de uma espécie previamente cadastrada
 
