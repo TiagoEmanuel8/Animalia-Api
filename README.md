@@ -25,7 +25,7 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
 
 - [Tecnologias envolvidas](#tecnologias-envolvidas)
 - [Funcionalidades](#funcionalidades)
-- [Requisitos técnicos](#requisitos-técnicos)
+- [Documentação API](#rdocumentação-api)
 - [Testes](#testes)
 - [Instalação e uso](#instalação-e-uso)
 
@@ -47,7 +47,7 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
 
 *Obs: Não achei que fazia sentido criar um método para deletar uma espécie, pois mesmo que sua espécie tenha sido extinta ainda seria válido deixar seu registro e no caso de erro durante o cadastro de uma espécie é possível editar.*
 
-# Requisitos técnicos
+# Documentação API
 
 ### 1 - A aplicação tem o endpoint `GET /specie`
 
