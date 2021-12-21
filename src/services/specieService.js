@@ -47,11 +47,6 @@ const updateSpecies = async (id, dataSpecie) => {
     reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome, nomeCientifico
   } = dataSpecie;
 
-  // const checkFields = reino && filo && classe && ordem && familia && genero && especie && nome;
-  // if(!checkFields) {
-  //   return { status: 400, message: 'the fields "Reino", "Filo", "Classe", "Ordem", "Familia", "Genero", "Especie", "Nome" are required.'}
-  // }
-
   const findSpecie = await Specie.findOne({ _id: id });
     if(!findSpecie) {
       return { status: 400, message: 'species not found' }
@@ -60,8 +55,9 @@ const updateSpecies = async (id, dataSpecie) => {
   const formatData = { 
     reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEspecie, nome, nomeCientifico 
     }
-  await Specie.updateOne({ _id: id }, formatData );
 
+  await Specie.updateOne({ _id: id }, formatData );
+  
   const specieWithImage = await Specie.findOne({ _id: id });
   return specieWithImage;
 };
