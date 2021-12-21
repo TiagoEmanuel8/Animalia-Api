@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { resolve } = require('path');
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const router = require('../routes/specieRoute');
 
 const uploadPath = resolve(__dirname, '..', 'images');
