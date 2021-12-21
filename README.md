@@ -25,7 +25,7 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
 
 - [Tecnologias envolvidas](#tecnologias-envolvidas)
 - [Funcionalidades](#funcionalidades)
-- [Documentação API](#rdocumentação-api)
+- [Documentação API](#documentação-api)
 - [Testes](#testes)
 - [Instalação e uso](#instalação-e-uso)
 
@@ -57,17 +57,14 @@ Os campos `reino, filo, classe, ordem, subOrdem, familia, genero, especie, subEs
 
 *Exemplo de requisição*
 
-![1 - registrar](https://user-images.githubusercontent.com/72472530/146537400-f7c0a6be-3e70-4e52-b4e7-67449073ed95.png)
-
+![1 - sucesso](https://user-images.githubusercontent.com/72472530/146947897-e7c8434d-7fde-46cd-934d-cc6a520bb55a.png)
 
 Será validado que os campos `reino, filo, classe, ordem,	familia, genero, especie e nome` são **obrigatórios**
 
 
 *No exemplo abaixo fiz a requisição sem o campo "name", porém o mesmo erro iria se repetir se algum dos campos obrigatórios não fossem enviados na requisição*
 
-
-![1 - validação](https://user-images.githubusercontent.com/72472530/146537890-201d6671-2b5f-4f61-bee3-908be9299748.png)
-
+![1 - caso de erro](https://user-images.githubusercontent.com/72472530/146947938-df82ac2d-024e-40d4-ae35-39d1c8525e34.png)
 
 ### 2 - A aplicação tem o endpoint `PUT /specie/:id/image`
 Esse endpoint é responsável por adicionar uma nova imagem a uma espécie previamente cadastrada.
@@ -76,11 +73,11 @@ O campo **id** deve corresponder ao id da espécie cadastrada
 
 *exemplo de requisição*
 
-![2 - adicionar imagem](https://user-images.githubusercontent.com/72472530/146543476-9a5c274d-b9b3-461d-af0b-e7e302d47388.png)
+![2 - caso de sucesso](https://user-images.githubusercontent.com/72472530/146948147-e453d7ea-7ed1-416d-a829-174156145bf7.png)
 
 Ao clicar na url a imagem será carregada
 
-![2 - acesso imagem](https://user-images.githubusercontent.com/72472530/146543531-4ccbf177-b53d-45f8-a0fc-41b61ec829a7.png)
+![2 - caso de erro](https://user-images.githubusercontent.com/72472530/146948187-4ca5c39d-aad8-46d9-95ed-37e1c84da763.png)
 
 Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
 
@@ -94,7 +91,7 @@ Esse endpoint é responsável por listar todas as espécies cadastradas no banco
 
 *exemplo de requisição*
 
-![3 - listar todos](https://user-images.githubusercontent.com/72472530/146543826-74301ea2-62c5-45e8-a3f3-4b954db59ed7.png)
+![3 - caso de sucesso](https://user-images.githubusercontent.com/72472530/146948252-9bb74846-b1c2-494f-8953-3ef6deb80c7b.png)
 
 ### 4 - A aplicação tem o endpoint `GET /specie/:id`
 
@@ -102,13 +99,13 @@ Esse endpoint é responsável por listar uma espécie através do **id**
 
 *exemplo de requisição*
 
-![4 - listar um](https://user-images.githubusercontent.com/72472530/146543857-bd80baec-4dad-422c-add9-46fb6febb8b3.png)
+![4 - caso de sucesso](https://user-images.githubusercontent.com/72472530/146948303-5ba1b785-883f-41a0-bcd6-002f74b9e6c4.png)
 
 Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
 
 *exemplo de requisição*
 
-![4 - validacao id](https://user-images.githubusercontent.com/72472530/146544054-7d50d3a6-aeb2-4339-a287-4fe378e3444d.png)
+![4 - caso de erro](https://user-images.githubusercontent.com/72472530/146948337-3be68a5f-55ca-41bf-9305-7abee7d7b7d1.png)
 
 ### 5 - A aplicação tem o endpoint `PUT /specie/:id`
 
@@ -118,17 +115,13 @@ Nessa requisição devem ser enviados dados através do **id** que corresponde a
 
 *exemplo de requisição*
 
-![5 - editar](https://user-images.githubusercontent.com/72472530/146544115-40d75df3-baec-4bde-9423-b26b454731c2.png)
+![5 - caso de sucesso](https://user-images.githubusercontent.com/72472530/146948377-44127e98-31b6-4cb7-adc5-fa8cf4bd37ec.png)
 
 Será validado que o campo id deve corresponder a alguma espécie previamente cadastrada no banco de dados, caso esse campo esteja errado será disparado um erro.
 
 *exemplo de requisição*
 
-![5 - validação id](https://user-images.githubusercontent.com/72472530/146544151-d02617ed-84f1-49d3-b6b0-689c0d298cb7.png)
-
-Será validado que os campos `reino, filo, classe, ordem,	familia, genero, especie e nome` são **obrigatórios**
-
-![5 - validação campos](https://user-images.githubusercontent.com/72472530/146544338-469268a5-c068-4662-89db-a56a1c04924a.png)
+![5 - caso de erro](https://user-images.githubusercontent.com/72472530/146948463-f8cc718a-8f5d-4190-b10e-b0da3c74bc79.png)
 
 # Testes
 
