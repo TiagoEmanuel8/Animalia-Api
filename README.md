@@ -43,8 +43,10 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
  - NodeJs
  - MongoDB
  - Jest
- - Json Web Token (jwt)
+ - Mongoose
+ - Mongo Atlas
  - Multer
+ - Heroku
 
 ---
 
