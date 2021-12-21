@@ -1,6 +1,19 @@
 # Boas vindas ao projeto Species-API
 
-###  Comentários sobre o projeto
+# Sumário
+
+- [Comentários sobre o projeto](#comentários-sobre-o-projeto)
+- [O que é o Species Api?](#o-que-é-o-species-api?)
+- [Deploy](#deploy)
+- [Tecnologias envolvidas](#tecnologias-envolvidas)
+- [Funcionalidades](#funcionalidades)
+- [Documentação API](#documentação-api)
+- [Testes](#testes)
+- [Instalação e uso](#instalação-e-uso)
+
+---
+
+#  Comentários sobre o projeto
 
 Durante a época de escola uma das minhas matérias favoritas era a biologia, e dentre os assuntos que mais gostava o estudo dos reinos biológicos (animal, vegetal, fungi, protista e monera) era algo que despertava muito minha curiosidade, tanto que chegava a passar horas e horas em livros lendo sobre o assunto e aprendendo.
 
@@ -11,23 +24,19 @@ Atualmente o projeto está em construção, mas está sendo uma experiência enr
 possui alguma dúvida, feedback ou quer entrar em contato comigo? 
 procure me através do email: tiago.emanuel.n@gmail.com
 
-### O que é o Species Api?
+---
+
+# O que é o Species Api?
 
 Uma aplicação Back end onde é possível registrar, listar e editar a taxonomia (classificar espécies) de seres vivos, também é possível adicionar imagem para representar cada espécie
 
-### Deploy
+---
+
+# Deploy
 Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em sua máquina.
 *obs: inicialmente cadastrei apenas 3 espécies no banco de dados, então a API só irá retornar essas espécies*
 
 ---
-
-# Sumário
-
-- [Tecnologias envolvidas](#tecnologias-envolvidas)
-- [Funcionalidades](#funcionalidades)
-- [Documentação API](#documentação-api)
-- [Testes](#testes)
-- [Instalação e uso](#instalação-e-uso)
 
 # Tecnologias envolvidas:
  - Javascript
@@ -36,6 +45,8 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
  - Jest
  - Json Web Token (jwt)
  - Multer
+
+---
 
 # Funcionalidades
 
@@ -46,6 +57,8 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
 - Editar uma espécie
 
 *Obs: Não achei que fazia sentido criar um método para deletar uma espécie, pois mesmo que sua espécie tenha sido extinta ainda seria válido deixar seu registro e no caso de erro durante o cadastro de uma espécie é possível editar.*
+
+---
 
 # Documentação API
 
@@ -123,11 +136,15 @@ Será validado que o campo id deve corresponder a alguma espécie previamente ca
 
 ![5 - caso de erro](https://user-images.githubusercontent.com/72472530/146948463-f8cc718a-8f5d-4190-b10e-b0da3c74bc79.png)
 
+---
+
 # Testes
 
 É possível abrir o terminal dentro da aplicação e digitar o comando `npm test specie.test.js` ou `npm test` para testar a aplicação
 
 ![2021-12-16-17-46-39](https://user-images.githubusercontent.com/72472530/146544916-712b61c9-0195-4acc-9320-f9d22a304975.gif)
+
+---
 
 # Instalação e uso
 
