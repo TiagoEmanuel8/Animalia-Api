@@ -13,7 +13,11 @@ procure me através do email: tiago.emanuel.n@gmail.com
 
 ### O que é o Species Api?
 
-Uma aplicação Back end onde é possível registrar, listar e editar a taxonomia (classificar espécies) de seres vivos, também é possível adicionar imagem nos campos.
+Uma aplicação Back end onde é possível registrar, listar e editar a taxonomia (classificar espécies) de seres vivos, também é possível adicionar imagem para representar cada espécie
+
+### Deploy
+Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em sua máquina.
+*obs: inicialmente cadastrei apenas 3 espécies no banco de dados, então a API só irá retornar essas espécies*
 
 ---
 
@@ -24,7 +28,6 @@ Uma aplicação Back end onde é possível registrar, listar e editar a taxonomi
 - [Requisitos técnicos](#requisitos-técnicos)
 - [Testes](#testes)
 - [Instalação e uso](#instalação-e-uso)
-
 
 # Tecnologias envolvidas:
  - Javascript
