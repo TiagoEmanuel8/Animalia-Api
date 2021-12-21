@@ -62,7 +62,7 @@ Acesse https://specieapi.herokuapp.com/ e veja a API rodando em tempo real em su
 
 # Documentação API
 
-### 1 - A aplicação tem o endpoint `GET /specie`
+### 1 - A aplicação tem o endpoint `POST /specie`
 
 
 Esse endpoint é responsável pelo cadastro de uma nova espécie
