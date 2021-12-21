@@ -19,7 +19,7 @@ Durante a época de escola uma das minhas matérias favoritas era a biologia, e 
 
 Uma parte que achava bastante interessante era o padrão para nomear um ser vivo pertencente a um reino, a forma com que os taxonomistas organizaram isso, após o módulo de back end no curso da Trybe, curti bastante a atuação dessa área e decidi fazer uma pequena contribuição dos meus conhecimentos atuais com esses conhecimentos da infância e assim nasceu a ideia desse projeto.
 
-Atualmente o projeto está em construção, mas está sendo uma experiência enriquecedora para mim pois esse está sendo desenvolvendo com TDD 'Test Driven Development' com Jest, ao mesmo tempo que uso e me aprofundo em tecnologias como nodejs, mongodb além de multer, bcrypt e jwt.
+Esse projeto foi especial porque além dessa parte de classificação de seres vivos, foi um projeto que fiz em TDD usando o Jest. também aprendi a usar o mongoose e o mongo Atlas, além de ser a minha primeira experiência com deploy de api. também consolidei bastante conhecimentos no nodejs e multer.
 
 possui alguma dúvida, feedback ou quer entrar em contato comigo? 
 procure me através do email: tiago.emanuel.n@gmail.com
