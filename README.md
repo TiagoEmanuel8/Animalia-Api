@@ -1,3 +1,5 @@
+# Obs: Atualmente o projeto está em atualização onde estou incluindo typescript, graphql, Prismadb, Swagger e Docker.
+
 # Boas vindas ao projeto Species-API
 
 # Sumário
